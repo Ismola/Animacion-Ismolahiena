@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: #F0C9B3;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: color 1s 8s forwards;
+}
+@keyframes color {
+    0%{
+        background: #F0C9B3;
+    }
+    100%{
+        background: #404040;
+    }
+}
+.pantalla {
+    width: 400px;
+    height: 750px;
+    background: #FFF0DF;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 1px 0 #f8fafd5b, 0 8px 22px #f8fafd5b, 0 4px 40px #f8fafd5b;
+    position: relative;
+    animation: mover 1s 8.5s forwards;
+}
+@keyframes mover {
+    0%{
+        box-shadow: 0 1px 0 #f8fafd5b, 0 8px 22px #f8fafd5b, 0 4px 40px #f8fafd5b;
+        border-radius: 15px;
+    }
+    100%{
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+.imagen {
+    /* background: blue; */
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+
+    /* padding: 10px;
+    border-radius: 12323123px; */
+    z-index: 2;
+    animation: imagen 4s 2s ease-in-out forwards;
+
+}
+
+@keyframes imagen {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(360deg);
+
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        top: 50%;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: 25%;
+    }
+}
+
+@keyframes contodo {
+    0% {
+        filter: opacity(0%);
+    }
+
+    100% {
+        filter: opacity(100%);
+    }
+}
+
+.contodo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    animation: contodo 1s 4s forwards;
+    filter: opacity(0%);
+}
+
+.rec1 {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: #d3b292;
+    animation: rec1 2s 2s ease-in-out forwards;
+    z-index: 1;
+}
+
+.rec2 {
+    height: 5%;
+    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 20%;
+
+    background: #404040;
+    z-index: 0;
+    animation: rec2 2s 2s ease-in-out forwards;
+
+
+}
+
+.rec3 {
+    height: 5%;
+    width: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+
+    background: #404040;
+    z-index: 0;
+    animation: rec3 2s 2s ease-in-out forwards;
+
+
+
+}
+
+@keyframes rec1 {
+    0% {
+        height: 100%;
+        width: 50%;
+    }
+
+    50% {
+        height: 10%;
+        width: 100%;
+    }
+
+    55% {
+        height: 10%;
+        width: 100%;
+    }
+
+    100% {
+        height: 10%;
+        width: 0%;
+    }
+}
+
+@keyframes rec2 {
+    0% {
+        width: 10%;
+        top: 20%;
+
+    }
+
+    50% {
+        width: 80%;
+        height: 10%;
+        top: 20%;
+
+    }
+
+    70% {
+        width: 80%;
+        height: 10%;
+        top: 20%;
+
+    }
+
+    100% {
+
+        width: 100%;
+        height: 50%;
+        top: 0%;
+    }
+}
+
+@keyframes rec3 {
+    0% {
+        width: 10%;
+        bottom: 20%;
+
+    }
+
+    50% {
+        width: 80%;
+        height: 10%;
+        bottom: 20%;
+
+    }
+
+    70% {
+        width: 80%;
+        height: 10%;
+        bottom: 20%;
+
+    }
+
+    100% {
+        bottom: 0%;
+        width: 100%;
+        height: 50%;
+    }
+}
+
+
+
+.rec4 {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* background: #404040; */
+    z-index: 3;
+
+    
+
+}
+
+input:focus{
+    outline: 0 none;
+}
+.filas{
+
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* background: red; */
+    /* padding: 0 10% 10% 10%; */
+    
+}
+.filas > div{
+    /* height: 20px; */
+    
+    width: 80%;
+    
+    color: #FFF0DF;
+    margin-bottom: 50px;
+}
+
+.filas > div:nth-child(1){
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+    animation: opacidad 1.5s 6s forwards;
+    filter: opacity(0%);
+    margin-bottom: 30px;
+}
+::placeholder { color: #777575; }
+.filas > div:nth-child(2){
+    animation: opacidad 1.5s 5.7s forwards;
+    filter: opacity(0%);
+}
+.filas > div:nth-child(3){
+    animation: opacidad 1.5s 5.5s forwards;
+    filter: opacity(0%);
+}
+.filas > div > input{
+    border: 0;
+    border-bottom: 1px solid  #777575;
+    background: transparent;
+    width: 100%;
+    color: #FFF0DF;
+    font-size: 15px;
+
+}
+.filas > div:nth-child(4){
+    color: #777575;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    align-items: center;
+    animation: opacidad 1.5s 5.3s forwards;
+    filter: opacity(0%);
+}
+.filas > div:nth-child(4) > div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.filas > div:nth-child(4) > div:nth-child(1) > input{
+    margin-right: 10px;
+}
+.filas > div:nth-child(4) > div:nth-child(2){
+    transition: .5s;
+    cursor: pointer;
+}
+.filas > div:nth-child(4) > div:nth-child(2):hover{
+    color: #FFF0DF;
+}
+.filas > div:nth-child(5) {
+    width: 200px;
+    background: #FFF0DF;
+    border-radius: 124312312px;
+    line-height: 30px;
+    color: #404040;
+    text-align: center;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    transition: .5s;
+    cursor: pointer;
+    filter: opacity(0%);
+    animation: opacidad 1.5s 5s forwards;
+}
+.filas > div:nth-child(5):hover{
+    width: 225px;
+}
+@keyframes opacidad {
+    0%{
+        filter: opacity(0%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+    
+}
